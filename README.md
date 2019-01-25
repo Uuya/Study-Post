@@ -22,3 +22,28 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|image|string||
+
+### Association
+- has_many :posts, dependent: :destroy
+
+## postsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|studied_at|integer|null: false|
+|study_time|integer|null: false|
+|content|string|null: false|
+|study_method|string|null: false|
+|reflection|string||
+|next_study|string||
+|other|string||
+
+### Association
+- belongs_to :user
