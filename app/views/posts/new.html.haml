@@ -1,0 +1,43 @@
+.form-style
+  .form-style-heading 学習記録
+  = form_for @post do |f|
+    %label
+      %span
+        タイトル
+        %span.required *
+      = f.text_field :title, type: :text, class: "input input-field", placeholder: "HTML&CSSを中心に学習！"
+    %label
+      %span
+        学習日
+        %span.required *
+      = f.date_field :studied_at, class: 'input data-field'
+    %label
+      %span
+        学習時間
+        %span.required *
+      = f.time_field :study_time, class: 'input time-field'
+    %label
+      %span
+        学習方法
+        %span.required *
+      = f.text_area :study_method, type: :text, class: "textarea textarea-field", placeholder: "1時間ごとに学習したことを15分でアウトプットした"
+    %label
+      %span
+        学習内容
+        %span.required *
+      = f.text_area :content, type: :text, class: "textarea textarea-field", placeholder: "レスポンシブWebデザインの基礎知識、CSSで円を描く方法"
+    %label
+      %span
+        反省点
+      = f.text_area :reflection, type: :text, class: "textarea textarea-field", placeholder: "集中力が続かず、手が止まっていることがあったため、次回からは長時間学習する時は休憩をこまめに取りたい"
+    %label
+      %span
+        次回学習内容
+      = f.text_area :next_study, type: :text, class: "textarea textarea-field", placeholder: "レスポンシブWebデザインを対応させる、CSSで中央寄せする方法"
+    %label
+      %span
+        その他
+      = f.text_area :other, type: :text, class: "textarea textarea-field", placeholder: "あと少しでWebサイトが完成しそうだから頑張る"
+
+
+    %button.input{name: "action", type: "submit"} 送信
