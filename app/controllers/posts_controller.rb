@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def show
+    @post = Post.find(id_params[:id])
   end
 
   def new
@@ -28,6 +29,9 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :studied_at, :study_time, :content, :study_method, :reflection, :next_study, :other).merge(user_id: current_user.id)
   end
 
+  def id_params
+    params.permit(:id)
+  end
 end
 
 
