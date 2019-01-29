@@ -1,0 +1,37 @@
+.post-show
+  %h2.post-title
+    = icon("fas", "pencil-alt")
+    = @post.title
+    .post-date
+      = @post.studied_at
+  .post-contents
+    .post-content
+      %p.post-content-item
+        学習時間
+      %p.post-content-text
+        = @post.study_time.strftime("%H時間%M分")
+    .post-content
+      %p.post-content-item
+        学習方法
+      %p.post-content-text
+        = @post.study_method
+    .post-content
+      %p.post-content-item
+        学習内容
+      %p.post-content-text
+        = @post.content
+    .post-content
+      %p.post-content-item
+        反省点
+      %p.post-content-text
+        = @post.reflection
+    .post-content
+      %p.post-content-item
+        次回学習内容
+      %p.post-content-text
+        = @post.next_study
+    .post-content
+      %p.post-content-item
+        その他
+      %p.post-content-text
+        = @post.other
