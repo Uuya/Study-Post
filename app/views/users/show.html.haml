@@ -1,0 +1,25 @@
+.myPage
+  .myPage__left-contents
+    %h2.myPage-title 学習記録
+    .myPage__post-list
+      - @posts.each do |post|
+        .myPage__post
+          .myPage__post-date
+            = post.studied_at
+          = link_to post_path(post) do
+            .myPage__post-title
+              = post.title
+  .myPage__right-content
+    %p.icon-box
+      = image_tag "#{@user.image}", class: "icon"
+    .myPage__user-info
+      = @user.name
+    .study_total
+      %p 総学習
+      %p.study_total_value
+        = @study_total
+      %p 時間
+
+  :javascript
+    calendar_print();
+

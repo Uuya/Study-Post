@@ -37,13 +37,16 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|title|string|null: false|
 |studied_at|integer|null: false|
 |study_time|integer|null: false|
+|study_minutes|integer|null: false|
 |content|string|null: false|
 |study_method|string|null: false|
 |reflection|string||
 |next_study|string||
 |other|string||
+|user|reference|foreign_key: true
 
 ### Association
 - belongs_to :user

@@ -8,8 +8,12 @@
     .post-content
       %p.post-content-item
         学習時間
-      %p.post-content-text
-        = @post.study_time.strftime("%H時間%M分")
+      %p.post-content-time
+        = @post.study_time
+        %span 時間
+      %p.post-content-time
+        = @post.study_minutes
+        %span 分
     .post-content
       %p.post-content-item
         学習方法

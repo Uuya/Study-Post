@@ -1,0 +1,219 @@
+.myPage{
+  width: 100%;
+  height: 100%;
+
+  &__left-contents{
+    float: left;
+    width: 80%;
+  }
+  &-title{
+    letter-spacing: 8px;
+    font-size: 24px;
+    width: 60%;
+    position: relative;
+    margin: 40px auto;
+    padding: 14px 15px 0px 20px;
+    color: #fff;
+    font-weight:bold;
+    background: #239DDA;
+    box-shadow: 12px 0 0 0 #239DDA, 0 12px 0 0 #239DDA, 1px 15px 4px -3px rgba(0,0,0,0.2);
+
+    &:before{
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        width: 0;
+        height: 0;
+        border-width: 12px 12px 0 0;
+        border-style: solid;
+        border-top-color: #2980AF;
+        color: transparent;
+    }
+  }
+  &__post {
+    font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+    text-align: center;
+    padding-top: 40px;
+
+    &-list{
+      overflow: auto;
+      height: 700px;
+    }
+    &-date{
+      display: inline-block;
+      vertical-align: top;
+      font-weight: bold;
+      font-size:11px;
+    }
+
+    &-title {
+      width: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      // margin-bottom:60px;
+      display: inline-block;
+      height: 50px;
+      text-align: center;
+      background-color: #7FC1D0;
+      line-height: 52px;
+      color: #FFF;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #7FC1D0;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      border-radius: 5px;
+      &:after {
+        width: 100%;
+        height: 0;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #FFF;
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        transition: .2s;
+        z-index: -1;
+      }
+      &:hover {
+        color: #7FC1D0;
+        &:after {
+          height: 600%;
+          opacity: 1;
+        }
+      }
+      &:active:after {
+        height: 340%;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__right-content{
+    float: right;
+    width: 20%;
+
+    .icon-box{
+      margin-top:20px;
+      text-align: center;
+
+      .icon{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+    }
+    .myPage__user-info{
+        margin-top:8px;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px silver;
+      font-size: 20px;
+      color:#F39800;
+    }
+
+  }
+}
+
+
+
+
+
+//カレンダー
+
+* {
+  font-family: Verdana;
+}
+#X_calendar_boxId{
+  display: inline-block;
+  color: #222;
+  padding: 20px;
+  margin-right: 30px;
+  line-height: 1.4;
+  float:right;
+
+  .X_calendar_weeks {
+    background-color: #333;
+    color: #ECF3F4;
+    border: 1px solid #D4D4D4;
+    text-align: center;
+  }
+
+  .X_calendar_table {
+    border-collapse: collapse;
+    border: 1px solid #888888;
+
+      & td {
+        border: 1px solid #C6C6C6;
+        text-align: center;
+        padding: 2px;
+      }
+  }
+
+  .X_calendar_none {
+    background-color: #7E9CAB;
+    color: #808080;
+  }
+
+  .X_calendar_holiday{
+    background-color: #7DCDF3;
+  }
+
+  .X_calendar_default {
+    background-color: #F3F9F9;
+  }
+
+  .X_calendar_today {
+    background-color: #93CA82;
+    font-weight: bold;
+  }
+
+  caption {
+    display: table-caption;
+    text-align: -webkit-center;
+    font-weight: bold;
+    color: #708AC4;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:link {
+      color: #5571c5;
+    }
+    &:visited {
+      color: #DC7C3C;
+      text-decoration: underline;
+    }
+    &:hover, &:focus {
+      // background-color: #C6CCD2;
+      border-style: solid;
+      border-color: #333333;
+      border-width: 1px 0;
+        color: #26426D;
+      }
+      &:active {
+        color: #5A616B;
+      }
+    }
+}
+
+
+.study_total{
+  margin-top:20px;
+  text-align: center;
+
+  &_value{
+    font-weight: bold;
+    // color: #A16EFF;
+    background: linear-gradient(transparent 60%, #ffff66 60%);
+  }
+  & p{
+    display: inline-block;
+    font-family: sans-serif;
+  }
+}
