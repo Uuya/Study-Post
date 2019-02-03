@@ -10,7 +10,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.save
+    if @post.save
+      redirect_to user_path(@post.user_id)
+    else
+      redirect_to new_post_path
+    end
   end
 
   def edit
@@ -26,7 +30,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :studied_at, :study_time, :content, :study_method, :reflection, :next_study, :other).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :studied_at, :study_time, :content, :study_method, :reflection, :next_study, :other, :study_minutes).merge(user_id: current_user.id)
   end
 
   def id_params
