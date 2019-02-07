@@ -4,6 +4,9 @@
     = @post.title
     .post-date
       = @post.studied_at
+  - if @post.user.id == current_user.id
+    = link_to post_path(@post), method: :delete,class: "post-icon", data: { confirm: '削除しますか？' } do
+      %i.fa.fa-trash
   .post-contents
     .post-content
       %p.post-content-item
