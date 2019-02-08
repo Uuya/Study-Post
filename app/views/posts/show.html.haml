@@ -1,12 +1,14 @@
 .post-show
   %h2.post-title
-    = icon("fas", "pencil-alt")
+    = icon("fas", "book-open")
     = @post.title
     .post-date
       = @post.studied_at
   - if @post.user.id == current_user.id
-    = link_to post_path(@post), method: :delete,class: "post-icon", data: { confirm: '削除しますか？' } do
-      %i.fa.fa-trash
+    = link_to edit_post_path(@post) do
+      = icon("fas", "pencil-alt", class: "post-edit-icon fa-lg ")
+    = link_to post_path(@post), method: :delete, data: { confirm: '削除しますか？' } do
+      = icon("fas", "trash", class: "post-trash-icon fa-lg")
   .post-contents
     .post-content
       %p.post-content-item
