@@ -1,9 +1,5 @@
 class PostsController < ApplicationController
 
-  def show
-    @post = Post.find(id_params[:id])
-  end
-
   def new
     @post = Post.new
   end
@@ -17,13 +13,24 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @post = Post.find(id_params[:id])
+  end
+
   def edit
+    @post = Post.find(id_params[:id])
   end
 
   def update
+    post = Post.find(id_params[:id])
+      post.update(post_params)
+      redirect_to "/posts/#{post.id}", notice: 'ブログを編集しました'
   end
 
   def destroy
+    post = Post.find(id_params[:id])
+    post.destroy
+    redirect_to user_path(post.user_id)
   end
 
 

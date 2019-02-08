@@ -59,3 +59,23 @@
 .post-content{
   margin:20px 0;
 }
+.post-edit-icon{
+  margin-left:10px;
+  color:#33CC33;
+  // text-decoration:none;
+  &:before, &:after{
+    text-decoration:none;
+    display: inline-block;
+  }
+
+}
+
+.post-trash-icon{
+  margin-left:10px;
+  color:#AAA;
+  // text-decoration:none;
+  &:before, &:after{
+    text-decoration:none;
+    display: inline-block;
+  }
+}
