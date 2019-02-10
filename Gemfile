@@ -60,7 +60,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-gem 'toastr-rails'
+gem 'toastr_rails'
 gem 'haml-rails'
 gem 'font-awesome-sass', '~> 5.2.0'
 gem 'pry-rails'
