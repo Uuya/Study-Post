@@ -17,5 +17,7 @@
               %i (英数字8文字以上)
             .field-input
               = f.password_field :password, autocomplete: "off"
+            - flash.each do |name, msg|
+              = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
           .actions
             = f.submit "Log in", class: 'btn'
