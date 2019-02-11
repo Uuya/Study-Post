@@ -1,3 +1,4 @@
+= render '/header'
 .myPage
   .myPage__left-contents
     %h2.myPage-title 学習記録
@@ -10,7 +11,7 @@
             .myPage__post-title
               = post.title
   .myPage__right-content
-    %p.icon-box
+    .icon-box
       = image_tag "#{@user.image}", class: "icon"
     .myPage__user-info
       = @user.name
