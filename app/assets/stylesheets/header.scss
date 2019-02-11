@@ -1,0 +1,88 @@
+.header{
+  height:70px;
+  background-color:rgba(164,155,145,0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  &-logo{
+    display: inline-block;
+    line-height: 70px;
+    margin-left:60px;
+    font-size: 30px;
+    font-family:"Fugaz One";
+    &-color{
+      font-family:"Fugaz One";
+      color: #1A6DC1;
+    }
+  }
+  &-postButton{
+    position: absolute;
+    top: 50%;
+    right:15%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform : translateY(-50%);
+    transform : translateY(-50%);
+    background-color:#D82630;
+    border-radius: 10px;
+    height: 70%;
+    width: 8%;
+    line-height: 50px;
+    text-decoration:none;
+    opacity: 1.0;
+
+      &-font{
+        text-align: center;
+        color:#fff;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+}
+
+.header-nav {
+  margin: 8px 0 0;
+  &-user {
+    position: absolute;
+    top: 50%;
+    right:9%;
+    .header-user {
+      position: relative;
+      display: inline-block;
+      -ms-transform: translateY(-50%);
+      -webkit-transform : translateY(-50%);
+      transform : translateY(-50%);
+      &-icon {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+      }
+      .user-list {
+        position: absolute;
+        visibility: hidden;
+        z-index:100;
+      }
+      .user-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 40px;
+        color: #fff;
+      }
+      .list {
+        padding-left: 16px;
+        background: #004970;
+        width: 150px;
+      };
+      .user-link:hover {
+        color: #ccc;
+      .list {
+        background: #4C6F9E
+        }
+      }
+    }
+    .header-user:hover {
+      .user-list {
+      visibility: visible;
+      }
+    }
+  }
+}
