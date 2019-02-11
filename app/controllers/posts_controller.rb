@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(id_params[:id])
     if post.destroy
-    redirect_to user_path(post.user_id), success: '削除しました'
+    redirect_to user_path(post.user_id), success: '投稿を削除しました'
     else
       flash.now[:error] = '削除に失敗しました。'
       render :show
