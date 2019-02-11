@@ -1,0 +1,21 @@
+%header.header
+  %h1.header-logo
+    STUDY
+    %span.header-logo-color POST
+  = link_to new_post_path , class: "header-postButton" do
+    %p.header-postButton-font 投稿する
+
+  .header-nav
+    %nav.header-nav-user
+      %ul.header-nav-user-box
+        %li.header-user
+          = image_tag "#{current_user.image}", class: "header-user-icon"
+          %ul.user-list
+            = link_to user_path(current_user.id), class: "user-link" do
+              %li.list マイページ
+            = link_to "#", class: "user-link" do
+              %li.list 下書き一覧
+            = link_to  edit_user_registration_path, class: "user-link" do
+              %li.list 設定
+            = link_to  users_sign_out_path, class: "user-link" do
+              %li.list ログアウト
