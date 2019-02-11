@@ -9,6 +9,21 @@ class UsersController < ApplicationController
     gon.posts = Post.where(user_id: params[:id])
   end
 
-private
+  def edit
+  end
 
+  def update
+    if current_user.update(user_params)
+      redirect_to user_path(current_user.id), success: "アカウントを編集しました"
+    else
+      flash.now[:error] = "編集に失敗しました"
+      render :edit
+    end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :email)
+  end
 end
