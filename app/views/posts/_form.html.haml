@@ -7,7 +7,7 @@
         %span.required *
       = f.text_field :title, type: :text, class: "input input-field", placeholder: "HTML&CSSを中心に学習！"
       - post.errors.full_messages_for(:title).each do |message|
-        .validation-error-mesage
+        .post-validation-error-mesage
           = message
     %label
       %span
@@ -15,7 +15,7 @@
         %span.required *
       = f.number_field :studied_at, class: 'input date-field', placeholder: "20190101(8桁入力)"
       - post.errors.full_messages_for(:studied_at).each do |message|
-        .validation-error-mesage
+        .post-validation-error-mesage
           = message
     %label
       %span
@@ -25,10 +25,10 @@
       %p.time-space :
       = f.number_field :study_minutes, min: 0, max: 59, class: 'input time-field'
       - post.errors.full_messages_for(:study_time).each do |message|
-        .validation-error-mesage
+        .post-validation-error-mesage
           = message
       - post.errors.full_messages_for(:study_minutes).each do |message|
-        .validation-error-mesage
+        .post-validation-error-mesage
           = message
     %label
       %span
@@ -36,7 +36,7 @@
         %span.required *
       = f.text_area :study_method, type: :text, class: "textarea textarea-field", placeholder: "1時間ごとに学習したことを15分でアウトプットした"
       - post.errors.full_messages_for(:study_method).each do |message|
-        .validation-error-mesage
+        .post-validation-error-mesage
           = message
     %label
       %span
@@ -44,7 +44,7 @@
         %span.required *
       = f.text_area :content, type: :text, class: "textarea textarea-field", placeholder: "レスポンシブWebデザインの基礎知識、CSSで円を描く方法"
       - post.errors.full_messages_for(:content).each do |message|
-        .validation-error-mesage
+        .post-validation-error-mesage
           = message
     %label
       %span
