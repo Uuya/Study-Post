@@ -12,7 +12,7 @@
               = post.title
   .myPage__right-content
     .icon-box
-      = image_tag "#{@user.image}", class: "icon"
+      = image_tag current_user.avatar.url, class: "icon"
     .myPage__user-info
       = @user.name
     .study_total
