@@ -6,6 +6,7 @@ ja:
         password: パスワード
         password_confirmation: パスワード確認
         email: メールアドレス
+        avatar: アイコン
   devise:
     confirmations:
       confirmed: "アカウントが確認されました。ログインしています。"

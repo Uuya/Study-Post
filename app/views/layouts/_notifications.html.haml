@@ -1,3 +1,6 @@
 - flash.each do |type, msg|
   :javascript
+    toastr.options = {
+      "positionClass": "toast-bottom-right"
+    }
     toastr['#{type}']('#{msg}');
