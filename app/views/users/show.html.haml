@@ -12,7 +12,10 @@
               = post.title
   .myPage__right-content
     .icon-box
-      = image_tag current_user.avatar.url, class: "icon"
+      - if @user.avatar.present?
+        = image_tag @user.avatar.url, class: "icon"
+      - else
+        = image_tag "no-image.png", class: "icon"
     .myPage__user-info
       = @user.name
     .study_total
