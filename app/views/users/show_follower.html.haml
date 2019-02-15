@@ -1,0 +1,14 @@
+= render '/header'
+%h2.followers-user フォロワー
+.followers-user-cards
+  - @user.followers.each do |user|
+    %section.followers-user-card
+      - if user.avatar.present?
+        = image_tag user.avatar.url, class: 'followers-user-card-img'
+      - else
+        = image_tag "no-image.png", class: 'followers-user-card-img'
+      .followers-user-card-content
+        %h1.followers-user-card-title
+          = user.name
+      .followers-user-card-link
+        = link_to '詳細', user_path(user), class: 'user-name-link'
