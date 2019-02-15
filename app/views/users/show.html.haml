@@ -18,6 +18,9 @@
         = image_tag "no-image.png", class: "icon"
     .myPage__user-info
       = @user.name
+    %section.stats
+      = render '/relationships/states'
+    = render '/relationships/follow_form'
     .study_total
       %p 総学習
       %p.study_total_value

@@ -1,0 +1,11 @@
+.states
+  = link_to "#{following_user_path(@user)}", class: 'following-link' do
+    %strong.following-state
+      %span.number
+        = @user.following.count
+      フォロー
+  = link_to "#{followers_user_path(@user)}", class: 'followers-link' do
+    %strong.followers-state
+      %span.number
+        = @user.followers.count
+      フォロワー
