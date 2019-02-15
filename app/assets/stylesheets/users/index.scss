@@ -1,0 +1,47 @@
+.search-user{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color:#1DA1F1;
+  padding-top:80px;
+
+  &-cards{
+    text-align: center;
+  }
+  &-card {
+    vertical-align:middle;
+    display: inline-block;
+    margin: 30px 20px;
+    width: 120px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+
+    &-img {
+      border-radius: 5px 5px 0 0;
+      width: 120px;
+      height: 120px;
+    }
+    &-content {
+      height: 40px;
+    }
+    &-title {
+      line-height: 40px;
+      font-size: 20px;
+      color: #333;
+    }
+    &-link {
+      text-align: center;
+      border-top: 1px solid #eee;
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: #0bd;
+        margin: 0 10px;
+        &:hover {
+          color: #0090aa;
+        }
+      }
+    }
+  }
+}
