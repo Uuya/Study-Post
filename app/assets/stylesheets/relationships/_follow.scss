@@ -1,0 +1,127 @@
+.follow-btn {
+  background-image: linear-gradient(#FFF,#F5F8FA);
+  border: 1px solid #E6ECF0;
+  border-radius: 4px;
+  color: #393E42;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 14px;
+  position: relative;
+
+  & i {
+    color: #1DA1F3;
+  }
+
+  &:hover {
+    background-color: #E6ECF0;
+    background-image: linear-gradient(#fff,#E6ECF0);
+    border-color: #E6ECF0;
+  }
+}
+
+.new_relationship, .edit_relationship{
+  text-align: center;
+}
+
+.states{
+  text-align: center;
+  margin: 15px 0;
+  .following-link, .followers-link{
+    text-decoration: none;
+  }
+  .following-state, .followers-state{
+    color:gray;
+    .number{
+      font-size: 18px;
+      color: #1DA1F3;
+    }
+  }
+}
+
+.following-user, .followers-user{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color:#1DA1F1;
+  padding-top:80px;
+}
+.following-user-cards{
+  text-align: center;
+}
+.following-user-card {
+  vertical-align:middle;
+  display: inline-block;
+  margin: 30px 20px;
+  width: 120px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+
+  &-img {
+    border-radius: 5px 5px 0 0;
+    width: 120px;
+    height: 120px;
+  }
+  &-content {
+    height: 40px;
+  }
+  &-title {
+    line-height: 40px;
+    font-size: 20px;
+    color: #333;
+  }
+  &-link {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 10px;
+    a {
+      text-decoration: none;
+      color: #0bd;
+      margin: 0 10px;
+      &:hover {
+        color: #0090aa;
+      }
+    }
+  }
+}
+
+.followers-user-cards{
+  text-align: center;
+}
+.followers-user-card {
+  display: inline-block;
+  margin: 30px 20px;
+  width: 120px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+
+  &-img {
+    border-radius: 5px 5px 0 0;
+    width: 120px;
+    height: 120px;
+  }
+  &-content {
+    height: 40px;
+  }
+  &-title {
+    line-height: 40px;
+    font-size: 20px;
+    color: #333;
+  }
+  &-link {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 10px;
+    a {
+      text-decoration: none;
+      color: #0bd;
+      margin: 0 10px;
+      &:hover {
+        color: #0090aa;
+      }
+    }
+  }
+}

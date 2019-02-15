@@ -9,7 +9,10 @@
     %nav.header-nav-user
       %ul.header-nav-user-box
         %li.header-user
-          = image_tag current_user.avatar.url, class: "header-user-icon"
+          - if current_user.avatar.present?
+            = image_tag current_user.avatar.url, class: "header-user-icon"
+          - else
+            = image_tag "no-image.png", class: "header-user-icon"
           %ul.user-list
             = link_to user_path(current_user.id), class: "user-link" do
               %li.list マイページ

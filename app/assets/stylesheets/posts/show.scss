@@ -1,8 +1,8 @@
 .post-show{
   max-width: 600px;
-  margin: 40px auto 0;
+  margin: 0 auto 0;
   padding: 90px 12px 10px 20px;
-  font: 13px Arial, Helvetica, sans-serif;
+  font-size: 13px;
 
   .post-title{
     display: inline-block;
@@ -62,20 +62,13 @@
 .post-edit-icon{
   margin-left:10px;
   color:#33CC33;
-  // text-decoration:none;
-  &:before, &:after{
-    text-decoration:none;
-    display: inline-block;
-  }
-
 }
 
 .post-trash-icon{
   margin-left:10px;
   color:#AAA;
-  // text-decoration:none;
-  &:before, &:after{
-    text-decoration:none;
-    display: inline-block;
-  }
+}
+
+.post-icon-link{
+  text-decoration: none;
 }

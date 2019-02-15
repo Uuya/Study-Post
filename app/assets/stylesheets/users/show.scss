@@ -34,7 +34,6 @@
     }
   }
   &__post {
-    font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
     text-align: center;
     padding-top: 40px;
 
@@ -211,8 +210,8 @@
 
   &_value{
     font-weight: bold;
-    // color: #A16EFF;
-    background: linear-gradient(transparent 60%, #ffff66 60%);
+    color: #1DA1F3;
+    font-size: 20px;
   }
   & p{
     display: inline-block;

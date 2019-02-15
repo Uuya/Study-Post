@@ -6,9 +6,9 @@
     .post-date
       = @post.studied_at
   - if @post.user.id == current_user.id
-    = link_to edit_post_path(@post) do
+    = link_to edit_post_path(@post), class: "post-icon-link" do
       = icon("fas", "pencil-alt", class: "post-edit-icon fa-lg ")
-    = link_to post_path(@post), method: :delete, data: { confirm: '削除しますか？' } do
+    = link_to post_path(@post), method: :delete, data: { confirm: '削除しますか？' }, class: "post-icon-link" do
       = icon("fas", "trash", class: "post-trash-icon fa-lg")
   .post-contents
     .post-content
