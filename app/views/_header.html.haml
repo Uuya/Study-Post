@@ -5,6 +5,11 @@
   = link_to new_post_path , class: "header-postButton" do
     %p.header-postButton-font 投稿する
 
+  = search_form_for @search, url:users_path do |f|
+    = f.text_field :name_cont, class: "search_form-input", placeholder: "ユーザー名を入力"
+    = button_tag type: 'submit', class: "search_form-button" do
+      = icon("fa","search")
+
   .header-nav
     %nav.header-nav-user
       %ul.header-nav-user-box
