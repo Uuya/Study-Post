@@ -22,7 +22,7 @@
     -ms-transform: translateY(-50%);
     -webkit-transform : translateY(-50%);
     transform : translateY(-50%);
-    background-color:#D82630;
+    background-color:#7FBFFF;
     border-radius: 10px;
     height: 70%;
     width: 8%;
@@ -35,6 +35,9 @@
         color:#fff;
         font-weight: bold;
         font-size: 16px;
+        &:hover{
+          color:#888;
+        }
       }
     }
 }
@@ -84,5 +87,43 @@
       visibility: visible;
       }
     }
+  }
+}
+
+//検索フォーム
+.user_search {
+  position: absolute;
+  top: 10%;
+  right:40%;
+  display: inline-block;
+}
+
+.search_form-input {
+  height: 50px;
+  width: 300px;
+  padding: 0 10px;
+  border-radius: 25px;
+  outline: 0;
+  background: #eee;
+}
+
+.search_form-button {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 330px;
+  top: 3px;
+  background: #7FBFFF;
+  color: #FFF;
+  border: none;
+  border-radius: 50%;
+  .fa-search {
+    font-size: 20px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+  }
+  &:hover {
+    color: #888;
   }
 }
