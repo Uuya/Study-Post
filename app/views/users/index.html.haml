@@ -1,0 +1,14 @@
+= render '/header'
+%h2.search-user 検索結果
+.search-user-cards
+  - @search_users.each do |user|
+    %section.search-user-card
+      - if user.avatar.present?
+        = image_tag user.avatar.url, class: 'search-user-card-img'
+      - else
+        = image_tag "no-image.png", class: 'search-user-card-img'
+      .search-user-card-content
+        %h1.search-user-card-title
+          = user.name
+      .search-user-card-link
+        = link_to '詳細', user_path(user), class: 'user-name-link'
