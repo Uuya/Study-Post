@@ -8,6 +8,7 @@ Rails.application.routes.draw do
      get :following, :followers
     end
   end
+  root 'top#index'
   resources :relationships, only: [:create, :destroy]
   resources :posts, only: [:show, :new, :create, :edit, :update, :destroy]
 end
