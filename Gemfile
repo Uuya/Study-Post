@@ -48,6 +48,8 @@ group :development, :test do
   gem 'mini_magick'
   gem 'ransack'
   gem 'rspec-rails'
+  gem "factory_bot_rails"
+  gem 'faker'
 end
 
 group :development do
