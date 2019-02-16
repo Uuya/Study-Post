@@ -1,7 +1,9 @@
 %header.header
-  %h1.header-logo
-    STUDY
-    %span.header-logo-color POST
+  = link_to root_path do
+    .header-logo-p
+      %h1.header-logo
+        STUDY
+        %span.header-logo-color POST
   = link_to new_post_path , class: "header-postButton" do
     %p.header-postButton-font 投稿する
 
