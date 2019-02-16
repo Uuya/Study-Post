@@ -1,0 +1,17 @@
+.top-page
+  .top-page__logo
+    = image_tag 'favicon.ico', class: 'top-page-icon'
+  %h1.top-page__logo-font
+    STUDY
+    %span.top-page__logo-font--color POST
+  %div
+    -if user_signed_in?
+      %a.mypage-link{:href => "/users/#{current_user.id}"}
+        %span.mypage マイページ
+      %div
+        %a.logout-link{:href => "/users/sign_out"} ログアウト
+    -else
+      %a.login-link{:href => "/users/sign_in"} ログイン
+      %div
+        %a.signup-link{:href => "/users/sign_up"}
+          %span.signup 新規登録

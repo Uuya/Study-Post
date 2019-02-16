@@ -1,4 +1,6 @@
 class RelationshipsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     relationship =  Relationship.create(create_params)
     redirect_to user_path(id: relationship[:following_id])
