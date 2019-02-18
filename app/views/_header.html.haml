@@ -1,9 +1,8 @@
 %header.header
   = link_to root_path do
-    .header-logo-p
-      %h1.header-logo
-        STUDY
-        %span.header-logo-color POST
+    %h1.header-logo
+      STUDY
+      %span.header-logo-color POST
   = link_to new_post_path , class: "header-postButton" do
     %p.header-postButton-font 投稿する
 
@@ -23,8 +22,6 @@
           %ul.user-list
             = link_to user_path(current_user.id), class: "user-link" do
               %li.list マイページ
-            = link_to "#", class: "user-link" do
-              %li.list 下書き一覧
             = link_to  edit_user_path(current_user.id), class: "user-link" do
               %li.list 設定
             = link_to  users_sign_out_path, class: "user-link" do
