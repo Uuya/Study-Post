@@ -47,7 +47,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :studied_at, :study_time, :content, :study_method, :reflection, :next_study, :other, :study_minutes).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :learning_date, :study_time, :content, :study_method, :reflection, :next_study, :other, :study_minutes).merge(user_id: current_user.id)
   end
 
   def id_params

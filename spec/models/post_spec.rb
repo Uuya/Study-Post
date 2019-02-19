@@ -4,7 +4,7 @@ RSpec.describe Post, type: :model do
 
   describe 'バリデーション' do
 
-    it 'title, studied_at, study_time, study_minutes, content, study_methodの値が設定されていればOK' do
+    it 'title, learning_date, study_time, study_minutes, content, study_methodの値が設定されていればOK' do
       post = build(:post)
       expect(post.valid?).to eq(true)
     end
@@ -15,10 +15,10 @@ RSpec.describe Post, type: :model do
       expect(post.errors[:title]).to include("を入力してください")
     end
 
-    it 'studied_atが空だとNG' do
-      post = build(:post, studied_at: nil)
+    it 'learning_dateが空だとNG' do
+      post = build(:post, learning_date: nil)
       post.valid?
-      expect(post.errors[:studied_at]).to include("を入力してください")
+      expect(post.errors[:learning_date]).to include("を入力してください")
     end
 
     it 'study_timeが空だとNG' do
@@ -56,28 +56,28 @@ RSpec.describe Post, type: :model do
       expect(post.errors[:title][0]).to include("は20文字以内で入力してください")
     end
 
-    it 'studied_atが8文字以上だとNG' do
-      post = build(:post, studied_at: "201901011")
+    it 'learning_dateが8文字以上だとNG' do
+      post = build(:post, learning_date: "201901011")
       post.valid?
-      expect(post.errors[:studied_at][0]).to include("は8文字で入力してください")
+      expect(post.errors[:learning_date][0]).to include("は8文字で入力してください")
     end
 
-    it 'studied_atが8文字だとOK' do
-      post = build(:post, studied_at: "20190101")
+    it 'learning_dateが8文字だとOK' do
+      post = build(:post, learning_date: "20190101")
       expect(post.valid?).to eq(true)
     end
 
-    it 'studied_atが8文字以下だとNG' do
-      post = build(:post, studied_at: "201911")
+    it 'learning_dateが8文字以下だとNG' do
+      post = build(:post, learning_date: "201911")
       post.valid?
-      expect(post.errors[:studied_at][0]).to include("は8文字で入力してください")
+      expect(post.errors[:learning_date][0]).to include("は8文字で入力してください")
     end
 
-    it "重複したstudied_atが存在するときNG" do
+    it "重複したlearning_dateが存在するときNG" do
       post = create(:post)
-      another_post = build(:post, studied_at: post.studied_at, user_id: 1)
+      another_post = build(:post, learning_date: post.learning_date, user_id: 1)
       another_post.valid?
-      expect(another_post.errors[:studied_at]).to include("はすでに存在します")
+      expect(another_post.errors[:learning_date]).to include("はすでに存在します")
     end
   end
 end

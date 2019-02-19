@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_02_19_102614) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.integer "study_minutes", null: false
-    t.integer "studied_at", null: false
+    t.integer "learning_date", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

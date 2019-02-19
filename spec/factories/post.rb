@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :post do
       title           {'テストタイトル'}
-      studied_at      {Faker::Number.number(8)}
+      learning_date   {Faker::Number.number(8)}
       study_time      {Faker::Number.between(0, 12)}
       study_minutes   {Faker::Number.between(0, 59)}
       content         {'テスト内容'}

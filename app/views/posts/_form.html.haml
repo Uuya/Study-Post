@@ -13,8 +13,8 @@
       %span
         学習日
         %span.required *
-      = f.number_field :studied_at, class: 'input date-field', placeholder: "20190101(8桁入力)"
-      - post.errors.full_messages_for(:studied_at).each do |message|
+      = f.number_field :learning_date, class: 'input date-field', placeholder: "20190101(8桁入力)"
+      - post.errors.full_messages_for(:learning_date).each do |message|
         .post-validation-error-mesage
           = message
     %label

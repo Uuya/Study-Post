@@ -6,7 +6,7 @@
       - @posts.each do |post|
         .myPage__post
           .myPage__post-date
-            = post.studied_at
+            = post.learning_date
           = link_to post_path(post) do
             .myPage__post-title
               = post.title

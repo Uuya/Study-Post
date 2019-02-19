@@ -3,7 +3,7 @@ ja:
     attributes:
       post:
         title: タイトル
-        studied_at: 学習日
+        learning_date: 学習日
         study_time: 時間
         study_minutes: 分
         content: 学習内容
