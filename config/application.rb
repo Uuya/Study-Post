@@ -1,6 +1,7 @@
 require_relative 'boot'
 
 require "rails"
+require 'devise'
 
 # Include each railties manually, excluding `active_storage/engine`
 require "active_model/railtie"
