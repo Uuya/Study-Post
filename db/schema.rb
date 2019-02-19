@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_015701) do
+ActiveRecord::Schema.define(version: 2019_02_19_102614) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "studied_at", null: false
     t.integer "study_time", null: false
     t.string "content", null: false
     t.string "study_method", null: false
@@ -25,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_02_14_015701) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.integer "study_minutes", null: false
+    t.integer "studied_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
