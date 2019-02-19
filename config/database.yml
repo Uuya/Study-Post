@@ -52,6 +52,7 @@ production:
   database: Study-Record_production
   username: Study-Record
   password: <%= ENV['STUDY-RECORD_DATABASE_PASSWORD'] %>
+  <<: *default
   adapter: postgresql
   encoding: unicode
   pool: 5
