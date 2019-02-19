@@ -22,7 +22,6 @@
 
 /public/assets/*
 /public/uploads/*
-app/assets/images/*
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
