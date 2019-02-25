@@ -6,12 +6,12 @@
     %span.top-page__logo-font--color POST
   %div
     -if user_signed_in?
-      %a.mypage-link{:href => "/users/#{current_user.id}"}
+      = link_to "/users/#{current_user.id}", class: "mypage-link" do
         %span.mypage マイページ
       %div
-        %a.logout-link{:href => "/users/sign_out"} ログアウト
+      = link_to "ログアウト", "/users/sign_out", class: "logout-link"
     -else
-      %a.login-link{:href => "/users/sign_in"} ログイン
+      = link_to "ログイン", "/users/sign_in", class: "login-link"
       %div
-        %a.signup-link{:href => "/users/sign_up"}
+        = link_to "/users/sign_up", class: "signup-link" do
           %span.signup 新規登録
