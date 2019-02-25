@@ -22,10 +22,10 @@
       = render '/relationships/states'
     = render '/relationships/follow_form'
     .study_total
-      %p 総学習
-      %p.study_total_value
+      %h4 総学習
+      %h4.study_total_value
         = @study_total
-      %p 時間
+      %h4 時間
 
   :javascript
     calendar_print();
