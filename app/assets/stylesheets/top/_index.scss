@@ -32,10 +32,10 @@
   }
   .mypage-link, .login-link{
     margin: 250px 0 20px 0;
-    @include link();
+    @include top-page-link-button();
   }
   .signup-link, .logout-link{
-    @include link();
+    @include top-page-link-button();
   }
 }
 a:visited {

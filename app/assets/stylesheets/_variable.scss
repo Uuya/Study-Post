@@ -3,6 +3,7 @@ $top-page-background-color              : #F5F5F5;
 $top-page-logo-font-color-study         : #333;
 $top-page-logo-font-color-post          : #1A6DC1;
 $top-page-logo-font-under-line-color    : #F7A4A4;
+$top-page-link-button-color             : #67C5FF;
 
 //my-page
 $my-page-study_total_value                 : #1DA1F3;
@@ -18,6 +19,16 @@ $my-page-post-title-hover-color            : #7FC1D0;
 //user-name
 $my-page-user-name-color                   : #F39800;
 $my-page-user-name-shadow-color            : #C0C0C0;
+//follow-button
+$my-page-follow-button-background-color          : #FFF;
+$my-page-follow-button-background-gradient-color : #F5F8FA;
+$my-page-follow-button-border-color              : #E6ECF0;
+$my-page-follow-button-text-color                : #393E42;
+$my-page-follow-button-icon-color                : #1DA1F3;
+$my-page-follow-button-background-hover-color    : #E6ECF0;
+//follow-state
+$my-page-follow-state-color        : #808080;
+$my-page-follow-state-number-color : #1DA1F3;
 
 //form
 $form-title-color                          : #1D50A2;
@@ -46,6 +57,31 @@ $post-show-post-content-text-color       : #424F56;
 $post-show-post-edit-icon-color          : #33CC33;
 $post-show-post-delete-icon-color        : #AAA;
 
+//users
+$users-title-color                : #1DA1F1;
+$users-card-background-color      : #FFF;
+$users-card-shadow-color          : #CCC;
+$users-card-name-color            : #333;
+$users-card-border-color          : #eee;
+$users-card-show-link-color       : #0BD;
+$users-card-show-link-hover-color : #0090AA;
+
+//header
+$header-color                                 : rgba(164,155,145,0.8);
+$header-logo-color                            : #1A6DC1;
+$header-post-button-background-color          : #7FBFFF;
+$header-post-button-text-color                : #FFF;
+$header-post-button-text-hover-color          : #888;
+//drop-down-list
+$header-drop-down-list-text-color             : #FFF;
+$header-drop-down-list-hover-text-color       : #CCC;
+$header-drop-down-list-background-color       : #004970;
+$header-drop-down-list-hover-background-color : #4C6F9E;
+//search-button
+$header-user-search-form-background-color     : #EEE;
+$header-user-search-button-background-color   : #7FBFFF;
+$header-user-search-icon-color                : #FFF;
+$header-user-search-icon-hover-color          : #888;
 
 //訪問済みリンク
 $visited-link-color : #333;
