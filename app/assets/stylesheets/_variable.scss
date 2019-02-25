@@ -16,8 +16,24 @@ $my-page-post-title-color                  : #FFF;
 $my-page-post-title-background-hover-color : #FFF;
 $my-page-post-title-hover-color            : #7FC1D0;
 //user-name
-$my-page-user-name-color            : #F39800;
-$my-page-user-name-shadow-color     : #C0C0C0;
+$my-page-user-name-color                   : #F39800;
+$my-page-user-name-shadow-color            : #C0C0C0;
+
+//form
+$form-title-color                          : #1D50A2;
+$form-title-border-color                   : #ddd;
+$form-required-color                       : #FF0000;
+$form-field-color                          : #EBEBEB;
+$form-field-border-color                   : #C2C2C2;
+$form-error-color                          : #FF0000;
+$form-focus-color                          : #89C3EB;
+$form-submit-button-background-color       : #2980AF;
+$form-submit-button-background-hover-color : #1D50A2;
+$form-submit-button-shadow-color           : #DADADA;
+$form-submit-button-color                  : #FFF;
+$form-validation-error-mesage-color        : #CC231C;
+
+
 
 //訪問済みリンク
 $visited-link-color : #333;
