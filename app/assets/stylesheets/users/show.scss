@@ -118,6 +118,21 @@
   }
 }
 
+.study_total{
+  margin-top : 20px;
+  text-align : center;
+
+  &_value{
+    font-weight : bold;
+    color       : #1DA1F3;
+    font-size   : 20px;
+  }
+  & h4{
+    display     : inline-block;
+    font-family : sans-serif;
+  }
+}
+
 //カレンダー
 
 * {
@@ -196,17 +211,3 @@
   }
 }
 
-.study_total{
-  margin-top : 20px;
-  text-align : center;
-
-  &_value{
-    font-weight : bold;
-    color       : #1DA1F3;
-    font-size   : 20px;
-  }
-  & p{
-    display     : inline-block;
-    font-family : sans-serif;
-  }
-}
