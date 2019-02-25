@@ -1,8 +1,10 @@
+@import "./mixins.scss";
+
 .follow-btn {
-  background-image : linear-gradient(#FFF,#F5F8FA);
-  border           : 1px solid #E6ECF0;
+  background-image : linear-gradient($my-page-follow-button-background-color,$my-page-follow-button-background-gradient-color);
+  border           : 1px solid $my-page-follow-button-border-color;
   border-radius    : 4px;
-  color            : #393E42;
+  color            : $my-page-follow-button-text-color;
   cursor           : pointer;
   display          : inline-block;
   font-size        : 14px;
@@ -11,13 +13,12 @@
   position         : relative;
 
   & i {
-    color : #1DA1F3;
+    color : $my-page-follow-button-icon-color;
   }
 
   &:hover {
-    background-color : #E6ECF0;
-    background-image : linear-gradient(#fff,#E6ECF0);
-    border-color     : #E6ECF0;
+    background-color : $my-page-follow-button-background-hover-color;
+    background-image : linear-gradient($my-page-follow-button-background-color,$my-page-follow-button-background-hover-color);
   }
 }
 
@@ -32,96 +33,19 @@
     text-decoration: none;
   }
   .following-state, .followers-state{
-    color : gray;
+    color : $my-page-follow-state-color;
     .number{
       font-size : 18px;
-      color     : #1DA1F3;
+      color     : $my-page-follow-state-number-color;
     }
   }
 }
 
-.following-user, .followers-user{
-  font-size   : 30px;
-  text-align  : center;
-  font-weight : bold;
-  color       : #1DA1F1;
-  padding-top : 80px;
-}
-.following-user-cards{
-  text-align: center;
-}
-.following-user-card {
-  vertical-align : middle;
-  display        : inline-block;
-  margin         : 30px 20px;
-  width          : 120px;
-  background     : #fff;
-  border-radius  : 5px;
-  box-shadow     : 0 2px 5px #ccc;
-
-  &-img {
-    border-radius : 5px 5px 0 0;
-    width         : 120px;
-    height        : 120px;
-  }
-  &-content {
-    height : 40px;
-  }
-  &-title {
-    line-height : 40px;
-    font-size   : 14px;
-    color       : #333;
-  }
-  &-link {
-    text-align : center;
-    border-top : 1px solid #eee;
-    padding    : 10px;
-    a {
-      text-decoration : none;
-      color           : #0bd;
-      margin          : 0 10px;
-      &:hover {
-        color : #0090aa;
-      }
-    }
-  }
+.following-user{
+  @include users-index();
 }
 
-.followers-user-cards{
-  text-align : center;
-}
-.followers-user-card {
-  display       : inline-block;
-  margin        : 30px 20px;
-  width         : 120px;
-  background    : #fff;
-  border-radius : 5px;
-  box-shadow    : 0 2px 5px #ccc;
 
-  &-img {
-    border-radius : 5px 5px 0 0;
-    width         : 120px;
-    height        : 120px;
-  }
-  &-content {
-    height : 40px;
-  }
-  &-title {
-    line-height : 40px;
-    font-size   : 14px;
-    color       : #333;
-  }
-  &-link {
-    text-align : center;
-    border-top : 1px solid #eee;
-    padding    : 10px;
-    a {
-      text-decoration : none;
-      color           : #0bd;
-      margin          : 0 10px;
-      &:hover {
-        color : #0090aa;
-      }
-    }
-  }
+.followers-user{
+  @include users-index();
 }
