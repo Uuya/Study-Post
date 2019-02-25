@@ -1,90 +1,90 @@
 .header{
-  height:70px;
-  background-color:rgba(164,155,145,0.8);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
+  height           : 70px;
+  background-color : $header-color;
+  position         : fixed;
+  width            : 100%;
+  z-index          : 3;
   &-logo{
-    display: inline-block;
-    line-height: 70px;
-    margin-left:60px;
-    font-size: 30px;
-    font-family:"Fugaz One";
+    display     : inline-block;
+    line-height : 70px;
+    margin-left : 60px;
+    font-size   : 30px;
+    font-family : "Fugaz One";
     &-color{
-      font-family:"Fugaz One";
-      color: #1A6DC1;
+      font-family : "Fugaz One";
+      color       : $header-logo-color;
     }
   }
   &-postButton{
-    position: absolute;
-    top: 50%;
-    right:15%;
-    -ms-transform: translateY(-50%);
+    position          : absolute;
+    top               : 50%;
+    right             : 15%;
+    -ms-transform     : translateY(-50%);
     -webkit-transform : translateY(-50%);
-    transform : translateY(-50%);
-    background-color:#7FBFFF;
-    border-radius: 10px;
-    height: 70%;
-    width: 8%;
-    line-height: 50px;
-    text-decoration:none;
-    opacity: 1.0;
+    transform         : translateY(-50%);
+    background-color  : $header-post-button-background-color;
+    border-radius     : 10px;
+    height            : 70%;
+    width             : 8%;
+    line-height       : 50px;
+    text-decoration   : none;
+    opacity           : 1.0;
 
-      &-font{
-        text-align: center;
-        color:#fff;
-        font-weight: bold;
-        font-size: 16px;
-        &:hover{
-          color:#888;
-        }
+    &-font{
+      text-align  : center;
+      color       : $header-post-button-text-color;
+      font-weight : bold;
+      font-size   : 16px;
+      &:hover{
+        color : $header-post-button-text-hover-color;
       }
     }
+  }
 }
 
 .header-nav {
-  margin: 8px 0 0;
+  margin : 8px 0 0;
   &-user {
-    position: absolute;
-    top: 50%;
-    right:9%;
+    position : absolute;
+    top      : 50%;
+    right    : 9%;
     .header-user {
-      position: relative;
-      display: inline-block;
-      -ms-transform: translateY(-50%);
+      position          : relative;
+      display           : inline-block;
+      -ms-transform     : translateY(-50%);
       -webkit-transform : translateY(-50%);
-      transform : translateY(-50%);
+      transform         : translateY(-50%);
       &-icon {
-        height: 50px;
-        width: 50px;
-        border-radius: 10px;
+        height        : 50px;
+        width         : 50px;
+        border-radius : 10px;
       }
       .user-list {
-        position: absolute;
-        visibility: hidden;
-        z-index:100;
+        position   : absolute;
+        visibility : hidden;
+        z-index    : 100;
       }
       .user-link {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 40px;
-        color: #fff;
+        font-weight : 400;
+        font-size   : 14px;
+        line-height : 40px;
+        color       : $header-drop-down-list-text-color;
       }
       .list {
-        padding-left: 16px;
-        background: #004970;
-        width: 150px;
-      };
+        padding-left : 16px;
+        background   : $header-drop-down-list-background-color;
+        width        : 150px;
+      }
       .user-link:hover {
-        color: #ccc;
+        color      : $header-drop-down-list-hover-text-color;
       .list {
-        background: #4C6F9E
+        background : $header-drop-down-list-hover-background-color;
         }
       }
     }
     .header-user:hover {
       .user-list {
-      visibility: visible;
+      visibility : visible;
       }
     }
   }
@@ -92,38 +92,38 @@
 
 //検索フォーム
 .user_search {
-  position: absolute;
-  top: 10%;
-  right:40%;
-  display: inline-block;
+  position : absolute;
+  top      : 10%;
+  right    : 40%;
+  display  : inline-block;
 }
 
 .search_form-input {
-  height: 50px;
-  width: 300px;
-  padding: 0 10px;
-  border-radius: 25px;
-  outline: 0;
-  background: #eee;
+  height        : 50px;
+  width         : 300px;
+  padding       : 0 10px;
+  border-radius : 25px;
+  outline       : 0;
+  background    : $header-user-search-form-background-color;
 }
 
 .search_form-button {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  left: 330px;
-  top: 3px;
-  background: #7FBFFF;
-  color: #FFF;
-  border: none;
-  border-radius: 50%;
+  height        : 50px;
+  width         : 50px;
+  position      : absolute;
+  left          : 330px;
+  top           : 3px;
+  background    : $header-user-search-button-background-color;
+  color         : $header-user-search-icon-color;
+  border        : none;
+  border-radius : 50%;
   .fa-search {
-    font-size: 20px;
-    position: absolute;
-    top: 30%;
-    left: 30%;
+    font-size : 20px;
+    position  : absolute;
+    top       : 30%;
+    left      : 30%;
   }
   &:hover {
-    color: #888;
+    color : $header-user-search-icon-hover-color;
   }
 }

@@ -66,5 +66,22 @@ $users-card-border-color          : #eee;
 $users-card-show-link-color       : #0BD;
 $users-card-show-link-hover-color : #0090AA;
 
+//header
+$header-color                                 : rgba(164,155,145,0.8);
+$header-logo-color                            : #1A6DC1;
+$header-post-button-background-color          : #7FBFFF;
+$header-post-button-text-color                : #FFF;
+$header-post-button-text-hover-color          : #888;
+//drop-down-list
+$header-drop-down-list-text-color             : #FFF;
+$header-drop-down-list-hover-text-color       : #CCC;
+$header-drop-down-list-background-color       : #004970;
+$header-drop-down-list-hover-background-color : #4C6F9E;
+//search-button
+$header-user-search-form-background-color     : #EEE;
+$header-user-search-button-background-color   : #7FBFFF;
+$header-user-search-icon-color                : #FFF;
+$header-user-search-icon-hover-color          : #888;
+
 //訪問済みリンク
 $visited-link-color : #333;
