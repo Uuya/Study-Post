@@ -15,10 +15,10 @@
     position       : relative;
     margin         : 40px auto;
     padding        : 14px 15px 0px 20px;
-    color          : #fff;
+    color          : $my-page-title-color;
     font-weight    : bold;
-    background     : #239DDA;
-    box-shadow     : 12px 0 0 0 #239DDA, 0 12px 0 0 #239DDA, 1px 15px 4px -3px rgba(0,0,0,0.2);
+    background     : $my-page-title-background-color;
+    box-shadow     : 12px 0 0 0 $my-page-title-background-color, 0 12px 0 0 $my-page-title-background-color, 1px 15px 4px -3px rgba(0,0,0,0.2);
 
     &:before{
         content          : " ";
@@ -29,7 +29,7 @@
         height           : 0;
         border-width     : 12px 12px 0 0;
         border-style     : solid;
-        border-top-color : #2980AF;
+        border-top-color : $my-page-title-background-before-color;
         color            : transparent;
     }
   }
@@ -55,12 +55,12 @@
       display          : inline-block;
       height           : 50px;
       text-align       : center;
-      background-color : #7FC1D0;
+      background-color : $my-page-post-title-background-color;
       line-height      : 52px;
-      color            : #FFF;
+      color            : $my-page-post-title-color;
       text-decoration  : none;
       font-weight      : bold;
-      border           : 2px solid #7FC1D0;
+      border           : 2px solid $my-page-post-title-background-color;
       position         : relative;
       overflow         : hidden;
       z-index          : 1;
@@ -72,14 +72,14 @@
         position   : absolute;
         top        : 50%;
         left       : 50%;
-        background : #FFF;
+        background : $my-page-post-title-background-hover-color;
         opacity    : 0;
         transform  : translateX(-50%) translateY(-50%) rotate(45deg);
         transition : .2s;
         z-index    : -1;
       }
       &:hover {
-        color : #7FC1D0;
+        color : $my-page-post-title-hover-color;
         &:after {
           height  : 600%;
           opacity : 1;
@@ -111,9 +111,9 @@
       text-align     : center;
       letter-spacing : 2px;
       font-weight    : bold;
-      text-shadow    : 1px 1px 2px silver;
+      text-shadow    : 1px 1px 2px $my-page-user-name-shadow-color;
       font-size      : 20px;
-      color          : #F39800;
+      color          : $my-page-user-name-color;
     }
   }
 }
