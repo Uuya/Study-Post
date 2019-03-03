@@ -60,7 +60,7 @@ class PostsController < ApplicationController
     @user = post.user_id
     unless current_user?(@user)
       flash[:error] = "操作が受け付けられません"
-      redirect_to(user_path)
+      redirect_to(user_path(current_user))
     end
   end
 end
